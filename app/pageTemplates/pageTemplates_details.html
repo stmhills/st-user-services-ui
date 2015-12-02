@@ -1,0 +1,52 @@
+<div class="row" cg-busy="{promise:pageTemplatesDetails,message:'',delay:0,minDuration:300,templateUrl:'../common/progress_template.html'}">
+  <div class="col-md-12">
+    <h2 class="msgId"> {{pageTemplatesDetails.name}} </h2>
+    
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="javascript:void(0);#details" data-toggle="tab">{{ 'administration_details_tab_label' | translate }}</a></li>
+    </ul>
+
+    <div class="tab-content">
+      <div class="tab-pane fade in active" id="details">
+        <form class="form-horizontal" name="templateForm">
+          <div class="st_button_bar">
+            <button ng-disabled="templateForm.$invalid" class="btn btn-primary dropdown-toggle" type="submit" data-ng-click="save()">{{'BTN_save_label' | translate }}</button>
+            <button class="btn btn-default dropdown-toggle" type="button" data-ng-click="reset()">{{'BTN_reset_label' | translate }}</button>
+            <button class="btn btn-danger dropdown-toggle" type="button" data-ng-click="confirmModal()">{{'BTN_delete_label' | translate }}</button>
+          </div> 
+          <div class="form-group">
+            <label for="name" class="col-sm-3 control-label">{{ 'administration_name_label' | translate }}</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="name" ng-required="true" ng-model="pageTemplatesDetails.name">
+              <span class="text-danger" ng-show="templateForm.name.$invalid  && !templateForm.name.$pristine">{{ 'administration_required_label' | translate }}</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="memoText" class="col-sm-3 control-label">{{ 'administration_description_label' | translate }}</label>
+            <div class="col-sm-8">
+              <textarea class="form-control" id="memoText" ng-model="pageTemplatesDetails.description"></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="businessCode" class="col-sm-3 control-label">{{ 'administration_businessCode_label' | translate }}</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="businessCode" ng-model="pageTemplatesDetails.businessCode" ng-required="true">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="status" class="col-sm-3 control-label">{{ 'administration_status_label' | translate }}</label>
+            <div class="col-sm-8">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="status" ng-true-value="'Active'" ng-false-value="'Inactive'" ng-model="pageTemplatesDetails.statusName" ng-checked="pageTemplatesDetails.statusName == 'Active'">{{ 'administration_active_label' | translate }}
+                </label>
+              </div>
+            </div>
+          </div>
+        </form>
+
+      </div><!-- /details tab -->        
+    </div><!-- /tab-content -->
+
+  </div><!-- /col -->
+</div><!-- /row -->

@@ -1,0 +1,21 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close" ng-click="cancel()" aria-hidden="true">
+      <span class="pficon pficon-close"></span>
+    </button>
+    <h4 class="modal-title" id="myModalLabel">{{ 'listingReports_confirmation_label' | translate }}</h4>
+  </div>
+  <form class="form-horizontal" role="form" name="tradeNameForm">
+    <div class="modal-body">
+
+      <div class="form-group">
+        <label for="tradeName" class="col-md-4 control-label">{{ 'listingReports_removeThisItem_label' | translate }}</label>
+        <div class="col-md-7">{{ itemName }}</div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" ng-click="cancel()">{{ 'BTN_cancel_label' | translate }}</button>
+      <button type="button" class="btn btn-danger" ng-click="confirm()">{{ 'BTN_confirm_label' | translate }}</button>
+    </div>    
+  </form>
+</div>

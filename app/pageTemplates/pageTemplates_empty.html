@@ -1,0 +1,54 @@
+<div class="row" cg-busy="{promise:saveProgress.$promise,message:'',delay:0,minDuration:300,templateUrl:'../common/progress_template.html'}">
+  <div class="col-md-12">
+    <h2 class="msgId"> {{ 'BTN_add_label' | translate }} </h2>
+    
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="javascript:void(0);#details" data-toggle="tab">{{ 'administration_details_tab_label' | translate }}</a></li>
+    </ul>
+
+    <div class="tab-content">
+      <div class="tab-pane fade in active" id="details" >
+
+        <form class="form-horizontal" name="templateForm">
+          <div class="st_button_bar">
+            <button ng-disabled="templateForm.$invalid" class="btn btn-primary dropdown-toggle" type="submit" data-ng-click="save()">{{ 'BTN_save_label' | translate }}</button>
+            <button class="btn btn-default dropdown-toggle" type="button" data-ng-click="cancel()">{{ 'BTN_cancel_label' | translate }}</button>
+          </div> 
+          <div class="form-group">
+            <label for="name" class="col-sm-3 control-label">{{ 'administration_name_label' | translate }}</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="name" name="name"  ng-required="true">
+              <span class="text-danger" ng-show="templateForm.name.$invalid  && !templateForm.name.$pristine">{{ 'administration_required_label' | translate }}</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="description" class="col-sm-3 control-label">{{ 'administration_description_label' | translate }}</label>
+            <div class="col-sm-9">
+              <textarea class="form-control" id="description" name="description" ></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="businessCode" class="col-sm-3 control-label">{{ 'administration_businessCode_label' | translate }}</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="businessCode" name="businessCode"  ng-required="true">
+              <span class="text-danger" ng-show="templateForm.businessCode.$invalid  && !templateForm.businessCode.$pristine">{{ 'administration_required_label' | translate }}</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="status" class="col-sm-3 control-label">{{ 'administration_status_label' | translate }}</label>
+            <div class="col-sm-9">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="status" ng-true-value="'Active'" ng-false-value="'Inactive'">{{ 'administration_active_label' | translate }}
+                </label>
+              </div>
+            </div>
+          </div>
+        </form>
+
+
+      </div><!-- /details tab -->        
+    </div><!-- /tab-content -->
+
+  </div><!-- /col -->
+</div><!-- /row -->

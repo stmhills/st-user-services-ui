@@ -1,0 +1,25 @@
+{
+    "application_title_label"               : "User Services",
+
+	"BTN_search_label"						: "Search",
+    "BTN_add_label"                         : "Add",
+    "BTN_save_label"                        : "Save",
+    "BTN_reset_label"						: "Reset",
+    "BTN_cancel_label"						: "Cancel",
+    "BTN_delete_label"                      : "Delete",
+    "BTN_remove_label"                      : "Remove",
+    "BTN_confirm_label"                     : "Confirm ",
+    "BTN_show_label"                        : "Show ",
+
+    "administration_administration_label"       : "Administration",
+    "administration_userAdministration_label"   : "User Administration",
+    "administration_pageTitle_label"            : "Page Title",
+    "administration_details_tab_label"          : "Details",
+    "administration_name_label"                 : "Name",
+    "administration_description_label"          : "Description",
+    "administration_businessCode_label"         : "Business Code",
+    "administration_status_label"               : "Status",
+    "administration_active_label"               : "Active",
+    "administration_required_label"             : "This is a required field.",
+    "administration_perPage_label"              : "per page"
+}
